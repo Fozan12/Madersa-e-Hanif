@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .icon {
+            cursor: pointer;
+        }
+        header, footer {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+        .contact-info {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        .contact-info a {
+            color: #35424a;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Contact Us</h1>
+        </div>
+    </header>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-item">
+                <p>Email: <a href="mailto:info@ourcompany.com">Unavailable</a></p>
+                <img width="40px" src="icon.png" alt="Copy Email" class="icon" onclick="copyText('info@ourcompany.com')">
+            </div>
+            <div class="contact-item">
+                <p>Facebook: <a href="https://www.facebook.com/OurCompanyPage" target="_blank">Unavailable</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>JUST CONTACT US!</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard: ' + text);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
+
